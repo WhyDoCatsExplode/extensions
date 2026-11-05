@@ -1,0 +1,57 @@
+{
+  "name": "firetv-remote",
+  "title": "Fire TV Remote",
+  "description": "An unofficial remote for Fire TV devices on your local network.",
+  "icon": "flame-icon.png",
+  "author": "whydocatsexplode",
+  "license": "MIT",
+  "categories": [
+    "Media",
+    "Applications"
+  ],
+  "commands": [
+    {
+      "name": "remote",
+      "title": "Show Remote",
+      "description": "A remote for your Fire TV, with rebindable hotkeys",
+      "mode": "view",
+      "subtitle": "Fire TV"
+    },
+    {
+      "name": "open-app",
+      "title": "Open App",
+      "description": "Open an app on your Fire TV",
+      "mode": "view",
+      "subtitle": "Fire TV"
+    },
+    {
+      "name": "pair",
+      "title": "Pair Fire TV",
+      "description": "Find your Fire TV on the network and pair with it",
+      "mode": "view"
+    }
+  ],
+  "dependencies": {
+    "@raycast/api": "^2.10.1"
+  },
+  "devDependencies": {
+    "@raycast/eslint-config": "^2.2.0",
+    "@types/node": "^26.6.6",
+    "@types/react": "^19.3.0",
+    "eslint": "^10.14.0",
+    "prettier": "^3.9.10",
+    "typescript": "~6.0"
+  },
+  "scripts": {
+    "build": "ray build",
+    "dev": "ray develop",
+    "fix-lint": "ray lint --fix",
+    "lint": "ray lint",
+    "prepublishOnly": "echo \"\\n\\nIt seems like you are trying to publish the Raycast extension to npm.\\n\\nIf you did intend to publish it to npm, remove the \\`prepublishOnly\\` script and rerun \\`npm publish\\` again.\\nIf you wanted to publish it to the Raycast Store instead, use \\`npm run publish\\` instead.\\n\\n\" && exit 1",
+    "publish": "npx @raycast/api@latest publish",
+    "test": "node --test test/*.test.ts"
+  },
+  "platforms": [
+    "macOS"
+  ]
+}
